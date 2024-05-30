@@ -8,7 +8,7 @@
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script> -->
     <style>
-        /* CSS를 HTML 내부에 적용하기 */
+        /* CSS를 HTML 내부에 적용하기, Style, Script는 주석이 C,C++ 주석 */
         h1 {
             color: white;
             background-color: blue;
@@ -16,10 +16,11 @@
     </style>
     <link rel="stylesheet" type="text/css" media="screen" href="practice.css">
     <script>
-        /* 주석 */
-        var name = prompt("이름을 입력하세요:");
-        alert("나의 이름은 " + name);
+        /* 주석, 내부스크립트. <script> 태그는 <body> 내에도 작성가능 */
+        var name = prompt("이름을 입력하세요");
+        alert("나의 이름은 " + name); // == Messagebox.show()
     </script>
+    <script src="practice.js"></script>
 </head>
 <body>
     <h1>HTML Start!!</h1>
