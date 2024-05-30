@@ -92,7 +92,13 @@ IoT 개발자과정 ASP.NET 리포지토리
     
 ## 2일차
 - HTML5
-    - 시맨틱 태그
+    - 시맨틱 태그 - 시맨트 태그로 화면을 구조를 잡는 웹구성 방식
+        - header, nav, footer, aside, section, article... 태그 사용
+        - 시맨틱 태그를 div로 바꿔도 똑같이 동작하기 때문에 요새는 많이 사용안함. 걷어내고 있는 추세
 - CSS3
-    - 웹 디자인 핵심
+    - 웹 디자인 핵심, Cascading Style Sheet
+    - 상단에서부터 <body> 부터 하위에 태그들에 계속해서 적용되는 스타일이라는 뜻
+    - 선택자에게 주어지는 디자인 속성
+    - 선택자(selector)
+    - 속성(property)
 - Javascript
