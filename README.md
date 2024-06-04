@@ -189,6 +189,9 @@ IoT 개발자과정 ASP.NET 리포지토리
         - 핀터레스트 타입 + 부트스트랩 웹페이지 만들기(완료)
     
 
+https://github.com/JinyongSon/basic-aspnet-2024/assets/129734178/719b1533-c47e-484d-9c77-beb8b368129f
+
+
 
 
 
