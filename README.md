@@ -7,7 +7,7 @@ IoT 개발자과정 ASP.NET 리포지토리
     - Full-Stack
         - Front-end : 웹사이트 화면으로 사람들에게 보이는 부분 기술
         - Back-end : 웹사이트 뒤에서 동작하는 서버기술
-        - Server-Operation : HW, OS, SW등 운영(클라우드)
+        - Server-Operation : HW, OS, SW등 운영(클라우드), 도커, 쿠버네티스...
 
 - 업무용 웹 사이트 참조
     - https://www.ecount.com/kr/ECK/ECK004M_CN.aspx
@@ -26,10 +26,10 @@ IoT 개발자과정 ASP.NET 리포지토리
     6. C - cgi, fasCGI ...
     7. PHP
 
-- 개발
+- 웹 개발
     - 프론트엔드 전부 + 백엔드 여러개 중 하나 + DB
-    - 웹 브라우저에서 F12(개발자도구)
-    - VS Code 플러그인
+    - 웹 브라우저에서 개발자도구(F12) 활용
+    - VS Code 플러그인 - 프론트엔드
         - HTML Code Snippet
         - Live Server
 
@@ -203,24 +203,28 @@ IoT 개발자과정 ASP.NET 리포지토리
     - 웹페이지 클로닝
         - Codehal 슬라이더 애니메이션 웹페이지 튜토리얼 따라하기 (완료)
 
-        https://github.com/JinyongSon/basic-aspnet-2024/assets/129734178/869c6297-f372-47d8-8678-8c20c763f479
+          https://github.com/JinyongSon/basic-aspnet-2024/assets/59336331/e5888f6d-ad0b-406e-bcb8-0425ef354edd
 
-    - 개인 웹페이지 클로닝
+        - 자동 슬라이드버튼 기능 추가
 
+          https://github.com/JinyongSon/basic-aspnet-2024/assets/59336331/2ecb5cdc-dd29-49a4-ad66-31f6174fa4c7
+    
+- 개인 웹페이지 클로닝
+
+    
 ## 8일차 
 - ASP.NET
-        - 웹퍼블리시 - HTML, CSS, Javascript만 가지고 웹페이지만 개발(디자인)
-        - 프론트엔드 개발자 - 웹퍼블리시가 만든 웹페이지에 백엔드와 연계를 해서 실제 동작하는 페이지 개발(개발자)
-            - json, 백엔드, DB 전반적인 개발 지식
+    - 웹퍼블리시 - HTML, CSS, Javascript만 가지고 웹페이지만 개발(디자인)
+    - 프론트엔드 개발자 - 웹퍼블리시가 만든 웹페이지에 백엔드와 연계를 해서 실제 동작하는 페이지 개발(개발자)
+        - json, 백엔드, DB 전반적인 개발 지식
 
     - ASP.NET 역사
         - 1990년대 MS가 웹 서버기술로 ASP(Active Server Page)를 배포. like JSP(Java Server Page)
         - ASP는 .NET으로 된 언어가 아닌, VBScript를 사용. 확장자(.asp)
         - 스파게티 코드! - HTML + CSS + javascript + VBScript 짬뽕으로 만든 웹 페이지
             - 프론트엔드 + 백엔드 소스가 모두 한페이지에...
-            - 다만, 현재 프론트엔드도 백엔드 소스가 일부는 포함되어 있음
+            - 다만, 현재 프론트엔드도 벡엔드 소스가 일부는 포함되어 있음
         - 많이 사용되었지만 유지보수 어렵고, 성능이 나쁘고 ... 
-
 
         - 2000년대 초반 MS가 .NET Framework를 발표.
         - C#, VB.NET, C++.NET 등의 새로운 언어를 배포, 여기에 맞춰서 웹 서버기술을 다시 만듬 -> ASP.NET(.aspx)
@@ -298,8 +302,9 @@ IoT 개발자과정 ASP.NET 리포지토리
             Done.
             ```
 
-    - 브라우저 실행 시 NET::ERR_CERT_INVALID 연결 비공개 설정이 안되 화면이 안나타나는 경우
+    - 브라우저 실행 시 NET::ERR_CERT_INVALID 연결 비공개 설정이 안되 화면이 안나타는 경우
         - 브라우저 화면 클릭, thisisunsafe 입력 엔터
+
 ## 9일차 (07.16)
 - ASP.NET Core MVC
     - MVC 리뷰
@@ -313,25 +318,25 @@ IoT 개발자과정 ASP.NET 리포지토리
             5. 모델내용을 뷰로 리턴
 
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
-    1. Visual Studio 에서 ASP.NET Core 웹앱(MVC)
+    1. Visual Studio 에서 ASP.NET Core 웹앱(MVC) 프로젝트 생성
     2. 부트스트랩 템플릿 사이트, 알맞은 템플릿 다운로드
     3. wwwroot 폴더 밑에 템플릿 html,css,js,이미지 등 위치
     4. 템플릿 페이지에 공통적인 부분(Header, Bottom)은 _layout.cshtml 에 위치
-    5. 중간에 페이지마다 변경되는 부분은 각 views 밑에 포함
+    5. 중간에 페이지마다 변경되는 부분은 각 Views 밑에 포함
     6. _layout.cshtml 에 공통부분 옮기기
     7. index.cshtml에 index.html에서 공통부분 외 영역 옮기기
     8. index.cshtml 내용 수정
 
     9. ResumeController.cs 생성, DB관련된 설정이 없으면 모델, 뷰를 만들기 어려움
-    10. Resume란 폴더가 Views 아래에 만듦. Index.cshtml
+    10. Resume 란 폴더가 Views 아래에 만듦. Index.cshtml
     11. resume.html에 네비게이션 아래 변경부분만 복사해서 index.cshtml에 붙여넣기
     12. Project, Contact도 동일하게 적용
 
-    13. Code First방식으로 Doard테이블 생성
-    14. NuGet 패키지에서 Microsoft.Entity Framework 패키지 검색, 설치
-    15. Microsoft.EntityFrameworkCore.Tools 검색 설치
-    16. Microsoft.EntityFrameworkCore.SqlServer 검색 설치
-    17. model/Board.cd 로 엔티티 클래스 생성
+    13. Code First방식으로 Board테이블 생성
+    14. NuGet 패키지에서 Microsoft.EntityFrameworkCore 패키지 검색, 설치
+    15. Microsoft.EntityFrameworkCore.Tools 검색, 설치
+    16. Microsoft.EntityFrameworkCore.SqlServer 검색, 설치
+    17. Models/Board.cs 로 엔티티 클래스 생성
     18. appsettings.json 에 DB 연결문자열 추가
     19. Data/AppDbContext.cs 생성
     20. Program.cs 에 DbContext 종속성 주입
@@ -340,24 +345,25 @@ IoT 개발자과정 ASP.NET 리포지토리
     23. /Controller/BoardController.cs를 생성(모델, 뷰 연결)
         - Entity Framework를 사용하며 뷰가 포함된 MVC컨트롤러
 
-        <img src="https://raw.githubusercontent.com/JinyongSon/basic-aspnet-2024/main/images/an0004.png" width="730">
-
-## 10일차
+        <img src="https://raw.githubusercontent.com/JinyongSon/basic-aspnet-2024/main/images/an0004.png" width="500">
+        
+    
+## 10일차 
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     1. Board.cs 멤버속성 ModeDate -> ModDate
         - BoardController.cs에서 ModeDate -> ModDate 변경
-        - Views/Board/*.chtml ModeDate -> ModDate 변경
-    2. ASP.NET Core 템플릿으로 만들어주는 CRUD(Insert, select, Update, Delete)
-    2. 테이블 삭제, 재성성
-    3. 게시판 관련된 화면 수정작업
+        - Views/Board/*.cshtml ModeDate -> ModDate 변경
+    2. ASP.NET Core 템플릿으로 만들어주는 CRUD(Insert, Select, Update, Delete)
+    3. 테이블 삭제, 재성성
+    4. 게시판 관련된 화면 수정작업
         - Views/Board/Index.cshtml 게시판 리스트화면 수정
-        - Index.cshtml 텡블 틀 변경, 삭제, 수정, 상세버튼 삭제
+        - Index.cshtml 테이블 틀 변경, 삭제, 수정, 상세버튼 삭제
         - Models/Board.cs에 테이블 한글이름 추가 DisplayName()
-
-        - Views/Board/Details.cshtml 부트스트랩 사용
-        - 수정, 삭제 등 버튼 디자인 적용
-        - Views/Board/Create.cshtml 부트스트랩 사용
-
+    
+        - Views/Board/Details.cshtml 부트스트랩 적용
+        - 수정, 삭제 등 버튼 디자인적용
+        - Views/Board/Create.cshtml 부트스트랩 적용
+    
     5. SSMS에서 Board테이블 Hit, RegDate, ModDate Null허용으로 변경
 
     6. 웹사이트 동작 순서
@@ -365,13 +371,72 @@ IoT 개발자과정 ASP.NET 리포지토리
         2. BoardController -> Create 액션메서드 발동
         3. Submit -> BoardController -> Create 액션메서드 발동
         4. Create 액션 메서드 내 로직처리 DB에 데이터 입력
-        5. Models/Board.cd ModDate를 Datetime -> DateTime? 변경
-        6. Edit 동일, Create.cshtml 내용을 그대로 복사/ 붙여넣기 단, asp-action-"Edit"로 변경 !!!
+        5. Models/Board.cs ModDate를 DateTime -> DateTime? 변경
+        6. Edit 동일, Create.cshtml 내용을 그대로 복사/붙여넣기 단, asp-action="Edit"로 변경!!!
 
-## 11일차
+## 11일차(07.23)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. EntityFramework로 SQL 사용없이 DB 핸들링
+        - DbContext.Add(삽입), Update(수정), Remove(삭제) 기능 존재
+        - 위의 명령을 실행 후 DbContext.SaveChangesAsync() 실행해서 실제 DB에 반영
+        - ToListAsync(), FirstOrDefaultAsync()는 SELECT로 트랜잭션이 발생X. 그래서 SaveChangesAsync()를 실행X
+    2. 글 조회수 올리기
+    3. 게시글 삭제
+        - _layout.cshtml의  @await RenderSectionAsync("Scripts", required: false) 이 각 페이지에 필요시 스크립트영역을 만들어써라는 의미
+        - AJAX 삭제는 나중에 다시!!!
     4. 페이징!!
-    5. 회원가입, 로그인....
-    6. 관리자모드/페이지
+        - 웹사이트에서 가장 중요한 기능 중 하나
+        - 한 페이지에 표시할 수 있는 글의 수를 제한
+        - 스크롤 페이징, 번호 페이징
+        - 번호 페이징
+            1. BoardController.cs Index() 액션메서드 내 FromSql()로 변경(비동기 적용 안됨, 비동기 부분 제거)
+            2. 페이징용 쿼리 작성
+
+                ```sql
+                SELECT *
+                  FROM (
+                          SELECT ROW_NUMBER() OVER (ORDER BY Id DESC) AS rowNum
+                               , Id
+                               , Name
+                               , UserId
+                               , Title
+                               , Contents
+                               , Hit
+                               , RegDate
+                               , ModDate
+                            FROM Board
+                        ) AS base
+                  WHERE base.rowNum BETWEEN 1 AND 10 -- 1과 10에 10씩 더하면 다음 페이지를 조회 쿼리
+                ```
+            3. Index() 내 로직 수정
+            4. Views/Board/Index.cshtml 화면코드 수정
+         
+            https://github.com/user-attachments/assets/490b39de-efd8-44fe-9fb3-2a0e99a18a48
+
+    5. 검색
+        - FromSqlRaw() 메서드 변경
+        - html 링크에 ?page=1&search=검색어 추가
+
+    6. HTML 에디터
+        - Markdown 에디터
+        - simplemde(https://simplemde.com)
+        - _layout.cshtml에 js, css 링크만 추가
+        - 실제 사용페이지에서 특정 js만 실행
+        - Create.cshtml, Edit.cshtml은 동일하게 작업
+        - NuGet패키지 Westwind.AspNetCore.Markdown 검색
+
+        <img src="https://raw.githubusercontent.com/JinyongSon/basic-aspnet-2024/main/images/an0006.png" width="700">        
+
+## 12일차
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 삭제로직 수정
+    2. 회원가입, 로그인....
+    3. 관리자모드/페이지
+
+
+
+
+
     
 
 
